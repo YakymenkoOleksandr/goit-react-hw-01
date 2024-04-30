@@ -3,6 +3,7 @@
   display: flex;
   margin: 0 auto;
   max-width: 100%;
+  margin-bottom: 30px;
 }
 
 .friendWrapper {
@@ -33,10 +34,9 @@
 }
 
 .friendStatus.online {
-    color: green;
+  color: green;
 }
 
 .friendStatus.offline {
-    color: red;
+  color: red;
 }
-
