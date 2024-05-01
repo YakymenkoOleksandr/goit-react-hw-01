@@ -12,8 +12,8 @@ export default function TransactionHistory(props) {
       <tbody>
         {props.items.map((transaction, index) => (
           <tr className={`${styles.row} ${index % 2 === 0 ? styles.even : styles.odd}`} key={transaction.id}>
-            <td className={styles.cell} {...styles.left}>{transaction.type}</td>
-            <td className={styles.cell} {...styles.center}>{transaction.amount}</td>
+            <td className={`${styles.cell} ${styles.left}`}>{transaction.type}</td>
+            <td className={`${styles.cell} ${styles.center}`}>{transaction.amount}</td>
             <td className={styles.cell}>{transaction.currency}</td>
           </tr>
         ))}

@@ -18,7 +18,7 @@ export default function Profile(props) {
           <span className={styles.socialActivity}>Followers</span>
           <span className={styles.numbers}>{props.stats.followers}</span>
         </li>
-        <li className={styles.wrapper} {...styles.center}>
+        <li className={`${styles.wrapper} ${styles.center}`}>
           <span className={styles.socialActivity}>Views</span>
           <span className={styles.numbers}>{props.stats.views}</span>
         </li>
