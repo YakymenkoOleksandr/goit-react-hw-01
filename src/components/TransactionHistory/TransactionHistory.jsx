@@ -1,6 +1,5 @@
-import transactions from './transactions.json';
 import styles from './TransactionHistory.module.css';
-export default function TransactionHistory() {
+export default function TransactionHistory(props) {
   return (
     <table className={styles.table}>
       <thead>
@@ -11,7 +10,7 @@ export default function TransactionHistory() {
         </tr>
       </thead>
       <tbody>
-        {transactions.map((transaction, index) => (
+        {props.items.map((transaction, index) => (
           <tr className={`${styles.row} ${index % 2 === 0 ? styles.even : styles.odd}`} key={transaction.id}>
             <td className={styles.cell} {...styles.left}>{transaction.type}</td>
             <td className={styles.cell} {...styles.center}>{transaction.amount}</td>

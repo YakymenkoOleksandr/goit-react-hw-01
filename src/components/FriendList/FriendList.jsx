@@ -1,9 +1,8 @@
-import friendData from './FriendList.json';
 import styles from './FriendList.module.css';
-export default function FriendList() {
+export default function FriendList(props) {
   return (
     <div className={styles.containerF}>
-      {friendData.map(friends => {
+      {props.friends.map(friends => {
         const classNameForFriendStatus = [styles.friendStatus];
         if (friends.isOnline === true) {
           classNameForFriendStatus.push(styles.online);
